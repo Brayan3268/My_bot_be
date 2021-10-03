@@ -10,7 +10,7 @@
 			$dataPeopleForKnowHelp = $datos["dataPeopleForKnowHelp"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into peopleForKnowHelp(namePerson, reason, dataPeopleForKnowHelp) values (?, ?, ?, ?)",
+				"insert into peopleForKnowHelp(namePerson, reason, dataPeopleForKnowHelp) values (?, ?, ?);",
 				array($namePerson, $reason, $dataPeopleForKnowHelp)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
