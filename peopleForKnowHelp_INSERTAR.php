@@ -7,11 +7,12 @@
 
 			$namePerson = $datos["namePerson"]; // obtener parametros POST
 			$reason = $datos["reason"];
+			$help = $datos["help"];
 			$dataPeopleForKnowHelp = $datos["dataPeopleForKnowHelp"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into peopleForKnowHelp(namePerson, reason, dataPeopleForKnowHelp) values (?, ?, ?);",
-				array($namePerson, $reason, $dataPeopleForKnowHelp)
+				"insert into peopleForKnowHelp(namePerson, reason, help, dataPeopleForKnowHelp) values (?, ?, ?, ?);",
+				array($namePerson, $reason, $help, $dataPeopleForKnowHelp)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
