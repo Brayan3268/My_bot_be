@@ -9,7 +9,7 @@
 			$typeMS = $datos["typeMS"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into moviesorserie(nameMovieOrSerie, typeMS) values (?, ?);",
+				"insert into movieorserie(nameMovieOrSerie, typeMS) values (?, ?);",
 				array($nameMovieOrSerie, $typeMS)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
