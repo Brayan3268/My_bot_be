@@ -7,10 +7,11 @@
 
 			$ideaDescription = $datos["ideaDescription"]; // obtener parametros POST
 			$dataIdea = $datos["dataIdea"];
+			$collaborator = $datos["collaborator"]; 
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into ideasforapps(ideaDescription, dataIdea) values (?, ?);",
-				array($ideaDescription, $dataIdea)
+				"insert into ideasforapps(ideaDescription, dataIdea, collaborator) values (?, ?, ?);",
+				array($ideaDescription, $dataIdea, $collaborator)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
