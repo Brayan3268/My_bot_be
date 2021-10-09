@@ -5,7 +5,7 @@
 		try{
 			//$datos = json_decode(file_get_contents("php://input"),true);
 
-			$respuesta = SQLGlobal::selectArray("select * from movieorserie");
+			$respuesta = SQLGlobal::selectArray("select * from ideasforapps");
             if($respuesta){
                 echo json_encode(array(
                     'respuesta'=>'200',
