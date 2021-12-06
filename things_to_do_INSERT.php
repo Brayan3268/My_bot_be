@@ -12,8 +12,8 @@
 			$status = $datos["status"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into thingstodo(title, description, datatoinsert, dataToDo, status) values (?, ?, ?, ?, ?);",
-				array($title, $description, $datatoinsert, $dataToDo, $status)
+				"insert into thingstodo(title, description, datatoinsert, status, dataToDo) values (?, ?, ?, ?, ?);",
+				array($title, $description, $datatoinsert, $status, $dataToDo)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
