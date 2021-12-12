@@ -5,13 +5,13 @@
 		try{
 			$datos = json_decode(file_get_contents("php://input"),true);
 
-			$intentcomand = $datos["intentcomand"]; // obtener parametros POST
+			$intentcomand = $datos["intentComand"]; // obtener parametros POST
 			$description = $datos["description"];
-			$whosuggestion = $datos["whosuggestion"];
-			$datasuggestion = $datos["datasuggestion"];
+			$whosuggestion = $datos["whoSuggestion"];
+			$datasuggestion = $datos["dataSuggestion"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into suggestioncomand(intentcomand, description, whosuggestion, datasuggestion) values (?, ?, ?, ?);",
+				"insert into suggestioncomand(intentComand, description, whoSuggestion, dataSuggestion) values (?, ?, ?, ?);",
 				array($intentcomand, $description, $whosuggestion, $datasuggestion)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
