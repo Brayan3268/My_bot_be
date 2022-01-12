@@ -8,11 +8,10 @@
 			$intentcomand = $datos["intentComand"]; // obtener parametros POST
 			$description = $datos["description"];
 			$whosuggestion = $datos["whoSuggestion"];
-			$datasuggestion = $datos["dataSuggestion"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into suggestioncomand(intentComand, description, whoSuggestion, dataSuggestion) values (?, ?, ?, ?);",
-				array($intentcomand, $description, $whosuggestion, $datasuggestion)
+				"insert into suggestioncomand(intentComand, description, whoSuggestion) values (?, ?, ?);",
+				array($intentcomand, $description, $whosuggestion)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
