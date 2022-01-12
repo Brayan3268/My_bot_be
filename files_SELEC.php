@@ -5,7 +5,7 @@
 		try{
 			//$datos = json_decode(file_get_contents("php://input"),true);
 
-			$respuesta = SQLGlobal::selectArray("select * from suggestioncomand");
+			$respuesta = SQLGlobal::selectArray("select * from files");
             if($respuesta){
                 echo json_encode(array(
                     'respuesta'=>'200',
