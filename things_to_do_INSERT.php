@@ -18,14 +18,14 @@
             if($respuesta > 0){
                 echo json_encode(array(
                     'respuesta'=>'200',
-                    'estado' => 'Se agrego correctamente la persona',
+                    'estado' => 'Se agrego correctamente el pendiente por hacer',
                     'data'=> 'El numero de registros afectados son: '.$respuesta,
                     'error'=>''
                 ));
             }else{
                 echo json_encode(array(
                     'respuesta'=>'100',
-                    'estado' => 'No se agrego correctamente la persona',
+                    'estado' => 'No se pudo agregar correctamente el pendiente por hacer',
                     'data'=> 'El numero de registros afectados son: '.$respuesta,
                     'error'=>''
                 ));

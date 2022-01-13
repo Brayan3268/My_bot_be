@@ -16,7 +16,7 @@
             }else{
                 echo json_encode(array(
                     'respuesta'=>'100',
-                    'estado' => 'No exite una cuenta con este correo',
+                    'estado' => 'No existen datos sobre las ideas',
                     'error'=>''
                 ));
             }

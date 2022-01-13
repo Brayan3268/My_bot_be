@@ -5,7 +5,7 @@
 		try{
 			//$datos = json_decode(file_get_contents("php://input"),true);
 
-			$respuesta = SQLGlobal::selectArray("select * from movieorserie");
+			$respuesta = SQLGlobal::selectArray("select * from phrase");
             if($respuesta){
                 echo json_encode(array(
                     'respuesta'=>'200',
@@ -16,7 +16,7 @@
             }else{
                 echo json_encode(array(
                     'respuesta'=>'100',
-                    'estado' => 'No existen datos sobre las películas o las series',
+                    'estado' => 'No existen datos sobre frases',
                     'error'=>''
                 ));
             }

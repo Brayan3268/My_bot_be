@@ -5,7 +5,7 @@
 		try{
 			//$datos = json_decode(file_get_contents("php://input"),true);
 
-			$respuesta = SQLGlobal::selectArray("select * from files");
+			$respuesta = SQLGlobal::selectArray("select * from book");
             if($respuesta){
                 echo json_encode(array(
                     'respuesta'=>'200',
@@ -16,7 +16,7 @@
             }else{
                 echo json_encode(array(
                     'respuesta'=>'100',
-                    'estado' => 'No exite una cuenta con este correo',
+                    'estado' => 'No existen datos para los libros',
                     'error'=>''
                 ));
             }
