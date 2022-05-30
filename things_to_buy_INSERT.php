@@ -5,13 +5,13 @@
 		try{
 			$datos = json_decode(file_get_contents("php://input"),true);
 
-			$namettb = $datos["namettb"]; // obtener parametros POST
+			$namethingstobuy = $datos["namethingstobuy"]; // obtener parametros POST
 			$category = $datos["category"];
 			$estimatedcost = $datos["estimatedcost"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into thingstobuy(namettb, category, estimatedcost) values (?, ?, ?);",
-				array($namettb, $category, $estimatedcost)
+				"insert into thingstobuy(namethingstobuy, category, estimatedcost) values (?, ?, ?);",
+				array($namethingstobuy, $category, $estimatedcost)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
