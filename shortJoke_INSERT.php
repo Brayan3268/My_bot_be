@@ -8,7 +8,7 @@
 			$shortJoke = $datos["shortJoke"]; // obtener parametros POST
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into shortJoke(shortJoke) values (?);",
+				"insert into shortjoke(shortJoke) values (?);",
 				array($shortJoke)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
