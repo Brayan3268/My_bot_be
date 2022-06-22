@@ -8,8 +8,8 @@
 			$description = $datos["description"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into saveRandomInfo values (?);",
-				array($phrase, $author)
+				"insert into saverandominfo values (?);",
+				array($description)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
