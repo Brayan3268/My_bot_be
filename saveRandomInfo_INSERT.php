@@ -8,7 +8,7 @@
 			$description = $datos["description"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into saverandominfo values (?);",
+				"insert into saverandominfo(description) values (?);",
 				array($description)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
