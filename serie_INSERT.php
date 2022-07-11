@@ -7,11 +7,12 @@
 
 			$nameSerie = $datos["nameSerie"]; // obtener parametros POST
 			$typeMS = $datos["typeMS"];
+			$season = $datos["season"];
 			$isHaveNext = $datos["isHaveNext"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into serie(nameSerie, typeMS, isHaveNext) values (?, ?, ?);",
-				array($nameSerie, $typeMS, $isHaveNext)
+				"insert into serie(nameSerie, typeMS, season, isHaveNext) values (?, ?, ?, ?);",
+				array($nameSerie, $typeMS, $season, $isHaveNext)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
