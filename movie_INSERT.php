@@ -5,24 +5,24 @@
 		try{
 			$datos = json_decode(file_get_contents("php://input"),true);
 
-			$nameMovieOrSerie = $datos["nameMovieOrSerie"]; // obtener parametros POST
-			$typeMS = $datos["typeMS"];
+			$nameMovie = $datos["nameMovie"]; // obtener parametros POST
+			$isHaveNext = $datos["isHaveNext"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"insert into movieorserie(nameMovieOrSerie, typeMS) values (?, ?);",
-				array($nameMovieOrSerie, $typeMS)
+				"insert into movie(nameMovie, isHaveNext) values (?, ?);",
+				array($nameMovie, $isHaveNext)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
                     'respuesta'=>'200',
-                    'estado' => 'Se agrego correctamente la película o serie',
+                    'estado' => 'Se agrego correctamente la película',
                     'data'=> 'El numero de registros afectados son: '.$respuesta,
                     'error'=>''
                 ));
             }else{
                 echo json_encode(array(
                     'respuesta'=>'100',
-                    'estado' => 'No se pudo agregar la película o serie',
+                    'estado' => 'No se pudo agregar la película',
                     'data'=> 'El numero de registros afectados son: '.$respuesta,
                     'error'=>''
                 ));

@@ -16,7 +16,7 @@
             }else{
                 echo json_encode(array(
                     'respuesta'=>'100',
-                    'estado' => 'No existen datos sobre las películas o las series',
+                    'estado' => 'No existen datos sobre las series',
                     'error'=>''
                 ));
             }

@@ -16,14 +16,14 @@
             if($respuesta > 0){
                 echo json_encode(array(
                     'respuesta'=>'200',
-                    'estado' => 'Se agrego correctamente la película o serie',
+                    'estado' => 'Se agrego correctamente la serie',
                     'data'=> 'El numero de registros afectados son: '.$respuesta,
                     'error'=>''
                 ));
             }else{
                 echo json_encode(array(
                     'respuesta'=>'100',
-                    'estado' => 'No se pudo agregar la película o serie',
+                    'estado' => 'No se pudo agregar la serie',
                     'data'=> 'El numero de registros afectados son: '.$respuesta,
                     'error'=>''
                 ));
