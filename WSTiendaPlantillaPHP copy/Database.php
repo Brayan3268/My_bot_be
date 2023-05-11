@@ -24,7 +24,7 @@ class Database{
     public function getDb(){
         if (self::$pdo == null) {
             self::$pdo = new PDO(
-                'pgsql:dbname=' . DB_DATABASE .';host=' . DB_SERVER .';',
+                'pgsql:dbname=' . DB_DATABASE .';host=' . DB_SERVER .';port=' . DB_PORT .';',
                 DB_USER,
                 DB_PASSWORD
             );
