@@ -1,4 +1,9 @@
+[build]
+  command="npm run build"
+  publish="/build"
+  base="/"
+
 [[redirects]]
-  from = "/file_INSERT"
+  from = "/*"
   to = "/file_INSERT.php"
   status = 200
