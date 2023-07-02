@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/file_INSERT"
-  to = "My_bot_be/files/file_INSERT.php"
+  to = "/files/file_INSERT.php"
   status = 200
