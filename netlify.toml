@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/file_INSERT"
-  to = "/files/file_INSERT.php"
+  to = "/file_INSERT.php"
   status = 200
