@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "/file_INSERT.php"
-  status = 200
